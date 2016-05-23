@@ -20,7 +20,7 @@
 
 $body-bg: white;
 $body-font-color: rgba(0,0,0,0.8);
-$body-font-family: "Noto Serif", "DejaVu Serif", serif;
+$body-font-family: "Noto Serif", "DejaVu Serif", sans-serif;
 
 @import "defaults";
 
@@ -36,7 +36,7 @@ $panel-font-color: rgba(0,0,0,0.75);
 
 $header-font-family: "Open Sans", "DejaVu Sans", sans-serif;
 $header-font-weight: 300;
-$header-font-color: #ba3925;
+$header-font-color: #00aeed;
 $header-line-height: 1.2;
 $header-top-margin: 1em;
 $header-word-spacing: -0.05em;
