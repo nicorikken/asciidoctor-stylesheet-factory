@@ -1,0 +1,102 @@
+// TIP set a value to null to disable
+@import "../../node_modules/normalize.css.less/normalize";
+@cursor-default-value: auto;
+// TODO: resolve these inclusions
+// @import "foundation/components/global";
+// @import "compass/css3/box-shadow";
+
+// better defaults (TODO maybe do these at the bottom of the theme colors)
+//@table-line-height: 1.6;
+//@table-head-font-size: inherit;
+@table-head-font-color: @body-font-color;
+//@table-row-font-size: inherit;
+@table-row-font-color: @body-font-color;
+
+// custom default variables
+// NOTE we have a chicken-egg problem here since Foundation
+// doesn't define all of it's variables in global, many
+// come from importing the components
+@rainbow-lightness: -25%;
+@rainbow-bg-lightness: -2%;
+@header-word-spacing: null;
+@subheader-font-family: null;
+@subheader-font-style: null;
+@subheader-font-size: null;
+@title-font-color: #000;
+@title-font-weight: bold;
+@font-smoothing: antialiased;
+@sect-divider-size: 1px;
+@sect-divider-style: solid;
+@sect-divider-color: #ddd;
+@sidebar-header-border-style: solid;
+@sidebar-header-border-size: 0;
+@sidebar-header-border-color: #ddd;
+@sidebar-header-align: null;
+
+@anchor-text-decoration-hover: null;
+
+@code-font-size: inherit;
+@code-line-height: inherit;
+@code-bg-color: inherit;
+@code-border-color: #ddd;
+@code-border-style: solid;
+@code-border-size: 0;
+@code-padding: 0;
+@code-word-spacing: 0;
+@code-text-rendering: inherit;
+
+@pre-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+@pre-font-size: emCalc(@em-base);
+@pre-font-color: inherit;
+@pre-border-size: 1px;
+@pre-border-style: solid;
+@pre-border-color: #ddd;
+@pre-bg: none;
+// smaller padding bottom needed if using Cousine / Liberation Sans font
+//@pre-padding: emCalc(12px) emCalc(12px) emCalc(8px) emCalc(12px);
+@pre-padding: emCalc(12px);
+@pre-line-height: 1.6;
+
+// fallback values set in components/asciidoc
+//@footer-bg: @body-font-color;
+//@footer-font-color: invert(@body-font-color);
+
+@icon-text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+
+@definition-list-content-margin-left: emCalc(18px);
+
+@blockquote-border-color: #ddd;
+
+@thumb-border-style: solid;
+@thumb-border-width: 4px;
+@thumb-border-color: #fff;
+@thumb-box-shadow: 0 0 0 1px #ddd;
+
+// exclude unnecessary styles
+@include-html-grid-classes: false;
+@include-html-panel-classes: false;
+@include-html-media-classes: false;
+@include-html-inline-list-classes: false;
+@include-print-styles: false;
+
+// cut down on number of vendor prefixes used
+@experimental-support-for-khtml: false;
+@experimental-support-for-microsoft: false;
+@experimental-support-for-mozilla: false;
+@experimental-support-for-opera: false;
+@experimental-support-for-webkit: true;
+
+// bg-noise from https://gist.github.com/aaronrussell/856571 by Aaron Russell
+@bg-noise-default-intensity: 0.5;
+@bg-noise-default-opacity: 0.08;
+@bg-noise-default-size: 200;
+
+.bg-noise(@color, @intensity: @bg-noise-default-intensity, @opacity: @bg-noise-default-opacity, @size: @bg-noise-default-size, @mono: false) {
+  background-color: @color;
+  background-image: background_noise(@color, @intensity, @opacity, @size, @mono);
+  background-repeat: repeat;
+}
+
+.bg-noise-mono(@color, @intensity: @bg-noise-default-intensity, @opacity: @bg-noise-default-opacity, @size: @bg-noise-default-size) {
+  .bg-noise(@color, @intensity, @opacity, @size, true);
+}
