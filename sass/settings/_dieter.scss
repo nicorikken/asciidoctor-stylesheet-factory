@@ -1,0 +1,143 @@
+// Color Palette
+
+// rgba(0,0,0,.9) - deep black
+// rgba(0,0,0,.85) - black
+// rgba(0,0,0,.8) - print black
+// rgba(0,0,0,.75) - light black
+// rgba(0,0,0,.6) - muted black
+// #ba3925 - orange
+// #7a2518 - dark orange
+// #3a120c - maroon
+// #2561ba - blue
+// #f8f8f7 - warm beige
+// #f7f7f8 - cool beige
+// #f7f8f7 - tinted beige
+// #ddddd8 - light gray
+// #d8d8d8 - lighter gray
+// #efefed - very light gray
+
+// Dieter color palette
+// Base
+// Middengrijs #808080 voor koppen en tekst in borders
+// Lichtgrijs #C0C0C0 voor borders
+// Dondergrijs #202020 voor tekst inclusief de bijhorende bullets
+// Oranjegeel #FFD600 voor accenten
+// ### Primary color:
+//    shade 0 = #FFD600 = rgb(255,214,  0) = rgba(255,214,  0,1) = rgb0(1,0.839,0)
+//    shade 1 = #FFE664 = rgb(255,230,100) = rgba(255,230,100,1) = rgb0(1,0.902,0.392)
+//    shade 2 = #FFDF39 = rgb(255,223, 57) = rgba(255,223, 57,1) = rgb0(1,0.875,0.224)
+//    shade 3 = #C6A600 = rgb(198,166,  0) = rgba(198,166,  0,1) = rgb0(0.776,0.651,0)
+//    shade 4 = #9B8200 = rgb(155,130,  0) = rgba(155,130,  0,1) = rgb0(0.608,0.51,0)
+//
+// ### Secondary color (1): (roze)
+//    shade 0 = #D0006E = rgb(208,  0,110) = rgba(208,  0,110,1) = rgb0(0.816,0,0.431)
+//    shade 1 = #DC569D = rgb(220, 86,157) = rgba(220, 86,157,1) = rgb0(0.863,0.337,0.616)
+//    shade 2 = #D32F86 = rgb(211, 47,134) = rgba(211, 47,134,1) = rgb0(0.827,0.184,0.525)
+//    shade 3 = #A10055 = rgb(161,  0, 85) = rgba(161,  0, 85,1) = rgb0(0.631,0,0.333)
+//    shade 4 = #7F0043 = rgb(127,  0, 67) = rgba(127,  0, 67,1) = rgb0(0.498,0,0.263)
+//
+// ### Secondary color (2): (blauw)
+//    shade 0 = #028E9B = rgb(  2,142,155) = rgba(  2,142,155,1) = rgb0(0.008,0.557,0.608)
+//    shade 1 = #48ABB5 = rgb( 72,171,181) = rgba( 72,171,181,1) = rgb0(0.282,0.671,0.71)
+//    shade 2 = #2697A2 = rgb( 38,151,162) = rgba( 38,151,162,1) = rgb0(0.149,0.592,0.635)
+//    shade 3 = #016E78 = rgb(  1,110,120) = rgba(  1,110,120,1) = rgb0(0.004,0.431,0.471)
+//    shade 4 = #01575F = rgb(  1, 87, 95) = rgba(  1, 87, 95,1) = rgb0(0.004,0.341,0.373)
+
+// Body (IMPORTANT $body-* variables must be defined above the defaults import)
+
+$body-bg: white;
+$body-font-color: rgba(0,0,0,0.8);
+// $body-font-family: "Droid Serif", "DejaVu Serif", serif;
+$body-font-family: "Droid Sans", "DejaVu Sans", sans-serif;
+
+@import "defaults";
+
+// Default Overrides
+
+$primary-color: darken(#2561ba, 5%);
+$alert-color: lighten(#3a120c, 15%); // $code-color is 15% darker than $alert-color, so we lighten here by 15%
+$global-radius: 4px;
+$panel-bg: #f8f8f7;
+$panel-font-color: rgba(0,0,0,0.75);
+
+// Headings
+
+$header-font-family: "Droid Sans", "DejaVu Sans", sans-serif;
+$header-font-weight: 300;
+$header-font-color: #FFD600;
+$header-line-height: 1.2;
+$header-top-margin: 1em;
+$header-word-spacing: -0.05em;
+$title-font-color: #FFD600;
+$title-font-weight: $header-font-weight;
+$preamble-font-color: #202020;
+$subheader-font-family: $body-font-family;
+$subheader-font-size: 1rem;
+$subheader-font-color: #D0006E;
+$subheader-font-weight: bold;
+$subheader-font-style: italic;
+$subheader-line-height: 1.45;
+$subheader-top-margin: 0;
+$subheader-bottom-margin: 0.25em;
+$sidebar-header-align: center;
+$sect-divider-size: 1px;
+$sect-divider-style: solid;
+$sect-divider-color: #efefed;
+$hr-border-color: #ddddd8;
+$footer-font-color: #DC569D;
+$footer-bg: darken($panel-bg, 5%);
+$details-font-color: #808080;
+
+// Paragraphs
+// FIXME doesn't support rem math
+//$paragraph-font-size: 1.0625rem; // result of emCalc(17px) converted to rem (18px is 1.125em)
+
+// Inline Code
+
+$code-font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+// NOTE will need to adjust code-font-size if we bump p font-size to 1.125em
+//$code-font-size: 0.95em;
+$code-font-size: emCalc(15px);
+$code-font-weight: normal;
+// FIXME don't forget about code in a table cell
+$code-line-height: 1.45;
+$code-color: rgba(0,0,0,0.9);
+$code-bg-color: #f7f7f8;
+$code-padding: 0.1em 0.5ex;
+$code-word-spacing: -0.15em;
+$code-text-rendering: optimizeSpeed;
+
+// Code Blocks
+// *Recommended highlight.js themes: magula, default, docco
+
+$pre-font-family: "Droid Sans Mono", "DejaVu Sans Mono", "Monospace", monospace;
+$pre-font-color: rgba(0,0,0,0.9);
+$pre-border-size: null;
+$pre-bg: #f7f7f8;
+$pre-padding: emCalc(16px);
+$pre-line-height: 1.45;
+
+// Links
+
+$anchor-text-decoration: underline;
+
+// Lists
+
+$list-side-margin: emCalc(24px);
+$definition-list-header-margin-bottom: emCalc(5px);
+$definition-list-margin-bottom: emCalc(20px);
+
+// Blockquotes
+
+$blockquote-font-color: $title-font-color;
+$blockquote-cite-font-color: rgba(0,0,0,0.6);
+$blockquote-cite-font-size: emCalc(15px);
+
+// Tables
+
+$table-head-font-size: inherit;
+$table-row-font-size: inherit;
+$table-line-height: 1.6;
+$table-head-bg: #f7f8f7;
+$table-even-row-bg: #f8f8f7;
+$table-border-color: #dedede;
